@@ -1,0 +1,1704 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Durban July · 4 July 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --cream: #F5F0E8;
+    --cream-deep: #EDE6D8;
+    --paper: #FBF8F2;
+    --charcoal: #1C1C1C;
+    --charcoal-soft: #3A3A3A;
+    --dim: #8C857B;
+    --rule: #D9D1C2;
+    --protea: #B87070;
+    --protea-deep: #9A5858;
+    --protea-soft: #D8AEAE;
+    --sage: #7A8771;
+    --sage-soft: #B8C2AE;
+    --aubergine: #5A3D4F;
+    --gold: #B8924A;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; }
+  body {
+    background: var(--cream);
+    color: var(--charcoal);
+    font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+    min-height: 100vh;
+  }
+
+  .wrap { max-width: 1180px; margin: 0 auto; padding: 28px 18px 80px; }
+
+  /* HERO */
+  .hero {
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 28px;
+    margin-bottom: 32px;
+  }
+  .eyebrow {
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--protea);
+    margin-bottom: 14px;
+  }
+  .hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(38px, 7vw, 64px);
+    line-height: 1.02;
+    margin: 0 0 8px;
+    color: var(--charcoal);
+    letter-spacing: -0.5px;
+  }
+  .hero h1 em {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--protea);
+  }
+  .hero .sub {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: clamp(17px, 2.2vw, 22px);
+    color: var(--charcoal-soft);
+    margin-bottom: 20px;
+    max-width: 640px;
+  }
+  .hero .facts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 28px;
+    margin-top: 18px;
+  }
+  .fact {
+    border-left: 2px solid var(--protea);
+    padding-left: 14px;
+  }
+  .fact .label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 4px;
+  }
+  .fact .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 22px;
+    font-weight: 500;
+  }
+
+  /* SECTION HEADERS */
+  .section {
+    margin-bottom: 48px;
+  }
+  .section-head {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 22px;
+    border-bottom: 1px solid var(--rule);
+    padding-bottom: 10px;
+  }
+  .section-head h2 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: clamp(24px, 4vw, 32px);
+    margin: 0;
+    color: var(--charcoal);
+  }
+  .section-head .meta {
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .section-intro {
+    color: var(--charcoal-soft);
+    margin-bottom: 22px;
+    max-width: 680px;
+  }
+
+  /* STARTING STALLS — the signature element */
+  .stalls {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 22px 18px 26px;
+    position: relative;
+  }
+  .stalls .rail {
+    position: absolute;
+    left: 14px;
+    top: 14px;
+    bottom: 14px;
+    width: 3px;
+    background: linear-gradient(to bottom, var(--protea) 0%, var(--protea) 60%, var(--protea-soft) 100%);
+    opacity: 0.4;
+  }
+  .stalls-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(155px, 1fr));
+    gap: 8px;
+    margin-left: 14px;
+  }
+  .stall {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 10px 12px 12px;
+    position: relative;
+    cursor: pointer;
+    transition: transform 0.15s, border-color 0.15s, background 0.15s;
+    border-left: 3px solid var(--rule);
+  }
+  .stall:hover { transform: translateY(-2px); border-color: var(--protea-soft); }
+  .stall.top-pick { border-left-color: var(--protea); background: var(--paper); }
+  .stall.value { border-left-color: var(--sage); }
+  .stall .draw {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--charcoal);
+    margin-bottom: 4px;
+  }
+  .stall .horse {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 16px;
+    line-height: 1.15;
+    margin-bottom: 6px;
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+  .stall .kg {
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    color: var(--dim);
+    font-variant-numeric: tabular-nums;
+  }
+  .stall .badge {
+    position: absolute;
+    top: 6px;
+    right: 8px;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    background: var(--protea);
+    color: var(--cream);
+  }
+  .stall.value .badge { background: var(--sage); }
+
+  /* TOP PICKS PANEL */
+  .picks-panel {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 14px;
+  }
+  .pick-card {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 22px 22px 20px;
+    position: relative;
+  }
+  .pick-card.rank-1 {
+    background: linear-gradient(135deg, var(--paper) 0%, #F2E8E2 100%);
+    border-color: var(--protea-soft);
+  }
+  .pick-card .rank {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 13px;
+    letter-spacing: 1px;
+    color: var(--protea);
+    margin-bottom: 6px;
+  }
+  .pick-card .horse {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 26px;
+    line-height: 1.1;
+    margin-bottom: 8px;
+    color: var(--charcoal);
+    font-weight: 500;
+  }
+  .pick-card .horse .num {
+    color: var(--dim);
+    font-size: 18px;
+    margin-right: 6px;
+  }
+  .pick-card .stats {
+    display: flex;
+    gap: 16px;
+    font-size: 12px;
+    color: var(--charcoal-soft);
+    letter-spacing: 0.5px;
+    margin-bottom: 12px;
+  }
+  .pick-card .stats span { font-variant-numeric: tabular-nums; }
+  .pick-card .why {
+    color: var(--charcoal-soft);
+    font-size: 14px;
+    line-height: 1.5;
+    border-top: 1px solid var(--rule);
+    padding-top: 12px;
+  }
+  .pick-card .prob {
+    position: absolute;
+    top: 18px;
+    right: 22px;
+    text-align: right;
+  }
+  .pick-card .prob .value {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    line-height: 1;
+    color: var(--protea);
+    font-weight: 600;
+  }
+  .pick-card .prob .label {
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-top: 3px;
+  }
+
+  /* PACE MAP */
+  .pace-map {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 20px;
+  }
+  .pace-lane {
+    display: grid;
+    grid-template-columns: 110px 1fr;
+    gap: 16px;
+    padding: 14px 0;
+    border-bottom: 1px solid var(--rule);
+    align-items: start;
+  }
+  .pace-lane:last-child { border-bottom: none; }
+  .pace-lane .label {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 18px;
+    color: var(--protea);
+  }
+  .pace-lane .horses {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px 10px;
+  }
+  .pace-horse {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 4px 9px;
+    font-size: 12px;
+    font-family: 'Lato', sans-serif;
+    letter-spacing: 0.3px;
+  }
+  .pace-horse .num {
+    color: var(--protea);
+    font-weight: 700;
+    margin-right: 4px;
+  }
+
+  /* VALUE TABLE */
+  .value-table-wrap {
+    overflow-x: auto;
+  }
+  table.value-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    min-width: 640px;
+  }
+  table.value-table th {
+    text-align: left;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--rule);
+    background: var(--cream-deep);
+  }
+  table.value-table td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--rule);
+    font-size: 14px;
+    vertical-align: middle;
+  }
+  table.value-table tr:last-child td { border-bottom: none; }
+  table.value-table td.num {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--protea);
+    width: 40px;
+    font-weight: 500;
+  }
+  table.value-table td.horse {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 17px;
+    font-style: italic;
+  }
+  table.value-table td.pct {
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+    width: 80px;
+  }
+  table.value-table input.odds {
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 6px 8px;
+    width: 70px;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+    font-variant-numeric: tabular-nums;
+    text-align: right;
+  }
+  .edge {
+    display: inline-block;
+    padding: 3px 9px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .edge.strong { background: var(--sage); color: var(--cream); }
+  .edge.mild { background: var(--sage-soft); color: var(--charcoal); }
+  .edge.none { color: var(--dim); background: transparent; }
+  .edge.neg { color: var(--dim); }
+
+  /* RUNNER CARDS */
+  .runners {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .runner {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    overflow: hidden;
+  }
+  .runner-head {
+    display: grid;
+    grid-template-columns: 48px 1fr auto;
+    align-items: center;
+    gap: 16px;
+    padding: 18px 22px;
+    cursor: pointer;
+    transition: background 0.15s;
+  }
+  .runner-head:hover { background: var(--cream-deep); }
+  .runner-head .num-block {
+    text-align: center;
+  }
+  .runner-head .num-block .saddle {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 28px;
+    font-weight: 600;
+    line-height: 1;
+    color: var(--charcoal);
+  }
+  .runner-head .num-block .draw-pill {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 2px 5px;
+    background: var(--cream-deep);
+    color: var(--dim);
+    margin-top: 4px;
+  }
+  .runner-head .main h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 22px;
+    line-height: 1.1;
+    margin: 0 0 4px;
+    color: var(--charcoal);
+  }
+  .runner-head .main .conn {
+    font-size: 12px;
+    color: var(--charcoal-soft);
+    letter-spacing: 0.3px;
+  }
+  .runner-head .main .conn .sep { color: var(--dim); margin: 0 6px; }
+  .runner-head .right {
+    text-align: right;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: var(--dim);
+  }
+  .runner-head .right .kg {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--charcoal);
+    letter-spacing: 0;
+    display: block;
+    margin-bottom: 2px;
+  }
+  .runner-head .right .mr-display {
+    font-variant-numeric: tabular-nums;
+  }
+  .runner-head .right .modelprob {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 16px;
+    color: var(--protea);
+    font-style: italic;
+    margin-top: 4px;
+  }
+  .runner-body {
+    display: none;
+    padding: 6px 22px 22px;
+    border-top: 1px solid var(--rule);
+  }
+  .runner.open .runner-body { display: block; }
+  .runner-body p {
+    color: var(--charcoal-soft);
+    margin: 12px 0 0;
+    font-size: 14.5px;
+    line-height: 1.65;
+  }
+  .runner-body .tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 14px;
+  }
+  .tag {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding: 3px 8px;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    color: var(--charcoal-soft);
+  }
+  .tag.pos { background: var(--sage-soft); color: var(--charcoal); border-color: var(--sage-soft); }
+  .tag.neg { background: #E8D5D5; color: var(--protea-deep); border-color: #E8D5D5; }
+
+  /* EXOTIC PANEL */
+  .exotic-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 14px;
+  }
+  .exotic {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 18px 20px;
+  }
+  .exotic h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 18px;
+    margin: 0 0 10px;
+    color: var(--protea);
+  }
+  .exotic .combo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 20px;
+    color: var(--charcoal);
+    margin-bottom: 8px;
+    line-height: 1.3;
+  }
+  .exotic .note {
+    font-size: 12px;
+    color: var(--dim);
+    line-height: 1.5;
+  }
+
+  /* FOOTER NOTES */
+  .notes {
+    background: var(--paper);
+    border-left: 3px solid var(--aubergine);
+    padding: 20px 24px;
+    margin-top: 20px;
+  }
+  .notes h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 12px;
+    color: var(--aubergine);
+  }
+  .notes p {
+    color: var(--charcoal-soft);
+    font-size: 14px;
+    margin: 0 0 10px;
+    line-height: 1.65;
+  }
+  .notes p:last-child { margin-bottom: 0; }
+  .notes em { font-style: italic; color: var(--charcoal); }
+
+  /* CONTROLS BAR */
+  .controls {
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 18px 20px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 22px;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .controls-group {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .controls-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+  }
+  .pace-toggle {
+    display: inline-flex;
+    border: 1px solid var(--rule);
+    background: var(--cream);
+  }
+  .pace-toggle button {
+    background: none;
+    border: none;
+    padding: 9px 14px;
+    font-family: 'Lato', sans-serif;
+    font-size: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    cursor: pointer;
+    border-right: 1px solid var(--rule);
+    transition: background 0.15s, color 0.15s;
+  }
+  .pace-toggle button:last-child { border-right: none; }
+  .pace-toggle button:hover { background: var(--cream-deep); }
+  .pace-toggle button.active {
+    background: var(--protea);
+    color: var(--cream);
+    font-weight: 700;
+  }
+  .btn-reset {
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 8px 16px;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .btn-reset:hover { background: var(--cream-deep); color: var(--charcoal); }
+  .btn-advanced {
+    background: transparent;
+    border: none;
+    padding: 8px 0;
+    font-family: 'Lato', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--protea);
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+  }
+  .btn-advanced:hover { color: var(--protea-deep); }
+
+  /* ADVANCED WEIGHTS PANEL */
+  .advanced-panel {
+    display: none;
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    padding: 20px 22px;
+    margin-bottom: 32px;
+  }
+  .advanced-panel.open { display: block; }
+  .advanced-panel h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-weight: 500;
+    font-size: 20px;
+    margin: 0 0 6px;
+    color: var(--charcoal);
+  }
+  .advanced-panel .helper {
+    font-size: 12px;
+    color: var(--dim);
+    margin-bottom: 18px;
+  }
+  .weight-row {
+    display: grid;
+    grid-template-columns: 160px 50px 1fr;
+    gap: 14px;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--rule);
+  }
+  .weight-row:last-child { border-bottom: none; }
+  .weight-row label { font-size: 13px; color: var(--charcoal-soft); }
+  .weight-row .pct {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 18px;
+    color: var(--protea);
+    font-weight: 500;
+    font-variant-numeric: tabular-nums;
+  }
+  .weight-row input[type="range"] {
+    accent-color: var(--protea);
+    width: 100%;
+  }
+  .weight-warning {
+    margin-top: 12px;
+    padding: 8px 12px;
+    background: var(--cream-deep);
+    font-size: 11px;
+    color: var(--dim);
+    letter-spacing: 0.3px;
+  }
+
+  /* SCRATCHED STATE */
+  .runner.scratched .runner-head {
+    opacity: 0.4;
+  }
+  .runner.scratched .runner-head h3 {
+    text-decoration: line-through;
+  }
+  .runner.scratched .modelprob {
+    color: var(--dim) !important;
+  }
+  .stall.scratched { opacity: 0.3; }
+  .stall.scratched .horse { text-decoration: line-through; }
+
+  /* SCRATCH TOGGLE */
+  .scratch-btn {
+    background: transparent;
+    border: 1px solid var(--rule);
+    padding: 5px 11px;
+    font-family: 'Lato', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--charcoal-soft);
+    cursor: pointer;
+    transition: background 0.15s, color 0.15s;
+  }
+  .scratch-btn:hover { background: var(--cream-deep); }
+  .scratch-btn.is-scratched {
+    background: var(--protea);
+    color: var(--cream);
+    border-color: var(--protea);
+  }
+
+  /* NOTES */
+  .runner-notes {
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px dashed var(--rule);
+  }
+  .runner-notes label {
+    display: block;
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-bottom: 6px;
+  }
+  .runner-notes textarea {
+    width: 100%;
+    background: var(--cream);
+    border: 1px solid var(--rule);
+    padding: 10px 12px;
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 15px;
+    color: var(--charcoal);
+    resize: vertical;
+    min-height: 50px;
+    line-height: 1.5;
+  }
+  .runner-notes textarea:focus {
+    outline: none;
+    border-color: var(--protea);
+  }
+  .runner-notes textarea::placeholder {
+    color: var(--dim);
+    font-style: italic;
+  }
+
+  /* RUNNER BODY ACTIONS */
+  .runner-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 16px;
+    padding-top: 14px;
+    border-top: 1px solid var(--rule);
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .runner-actions .action-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    margin-right: auto;
+  }
+
+  /* MOBILE: smaller controls */
+  @media (max-width: 700px) {
+    .controls { flex-direction: column; align-items: stretch; gap: 16px; }
+    .pace-toggle button { padding: 8px 10px; font-size: 11px; flex: 1; }
+    .pace-toggle { display: flex; width: 100%; }
+    .weight-row { grid-template-columns: 130px 40px 1fr; gap: 10px; }
+  }
+
+  /* FOOTER */
+  footer.foot {
+    margin-top: 64px;
+    padding-top: 22px;
+    border-top: 1px solid var(--rule);
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--dim);
+    text-align: center;
+  }
+  footer.foot em {
+    font-style: italic;
+    color: var(--protea);
+    text-transform: none;
+    letter-spacing: 0.3px;
+    font-size: 14px;
+    font-family: 'Cormorant Garamond', serif;
+  }
+
+  /* MOBILE */
+  @media (max-width: 700px) {
+    .wrap { padding: 20px 14px 60px; }
+    .stalls-grid { grid-template-columns: repeat(2, 1fr); }
+    .hero .facts { gap: 18px; }
+    .picks-panel { grid-template-columns: 1fr; }
+    .runner-head { grid-template-columns: 40px 1fr auto; padding: 14px 16px; gap: 12px; }
+    .runner-head .num-block .saddle { font-size: 22px; }
+    .runner-head .main h3 { font-size: 18px; }
+    .runner-body { padding: 6px 16px 18px; }
+    .pace-lane { grid-template-columns: 1fr; gap: 8px; }
+    .pace-lane .label { font-size: 16px; }
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="eyebrow">The 130th running · A handicapping tool</div>
+    <h1>The Durban <em>July</em></h1>
+    <div class="sub">Eighteen of South Africa's middle-distance best, over 2 200 metres of Greyville turf, with a record R10 million on the line.</div>
+    <div class="facts">
+      <div class="fact"><div class="label">Race day</div><div class="value">Sat 4 July 2026</div></div>
+      <div class="fact"><div class="label">Off time</div><div class="value">15:10</div></div>
+      <div class="fact"><div class="label">Distance</div><div class="value">2 200m turf</div></div>
+      <div class="fact"><div class="label">Field</div><div class="value">18 + 2 reserves</div></div>
+      <div class="fact"><div class="label">Top weight</div><div class="value">62kg · Legal Counsel</div></div>
+    </div>
+  </header>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="controls-group">
+      <div class="controls-label">Pace scenario</div>
+      <div class="pace-toggle" id="paceToggle">
+        <button data-pace="genuine">Genuine pace</button>
+        <button data-pace="normal" class="active">Steady tempo</button>
+        <button data-pace="tactical">Tactical / slow</button>
+      </div>
+    </div>
+    <div class="controls-group" style="align-items: flex-end;">
+      <button class="btn-advanced" id="advancedBtn">Advanced ▾</button>
+      <button class="btn-reset" id="resetBtn">Reset all to defaults</button>
+    </div>
+  </div>
+
+  <!-- ADVANCED WEIGHTS PANEL -->
+  <div class="advanced-panel" id="advancedPanel">
+    <h3>Adjust the rubric</h3>
+    <div class="helper">These are the weights the model puts on each factor when scoring a runner. Move them only if you want to express your own view. They will renormalise so the total stays at 100%.</div>
+    <div id="weightsRows"></div>
+    <div class="weight-warning">Changes apply immediately. Reset all to defaults will return them to my starting values.</div>
+  </div>
+
+  <!-- THE STALLS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>The starting stalls</h2>
+      <div class="meta">Draw · Horse · Weight</div>
+    </div>
+    <p class="section-intro">Five of the last ten Durban Julys were won from stall 11 or wider, so the draw is not the deal-breaker most punters assume. Inside draws can be a trap at Greyville's 2200m start — boxes one and two often get shuffled back or pinned to the rail. Pink shading marks the top three by the model; sage marks horses where the model sees value against current ante-post odds.</p>
+    <div class="stalls">
+      <div id="stalls-grid" class="stalls-grid"></div>
+    </div>
+  </section>
+
+  <!-- TOP PICKS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>The model's three</h2>
+      <div class="meta">Sorted by model probability</div>
+    </div>
+    <p class="section-intro">The model combines merit rating, weight, draw, recent form, distance suitability, and connections strength. It is not a trained machine learning model. Treat these as a structured view, not advice. Tap any runner below to see the full case.</p>
+    <div id="picks-panel" class="picks-panel"></div>
+  </section>
+
+  <!-- PACE MAP -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Pace map</h2>
+      <div class="meta">Likely race shape</div>
+    </div>
+    <p class="section-intro">Justin Snaith typically uses Legal Counsel as a pace-setter in features, which would suit Star Major and the stalkers behind. If Legal Counsel is held back to conserve under 62kg, the race could become tactical and the closers — particularly Aladdin's Lamp from the widest draw — would benefit. A truly run race favours the genuine 2200m horses.</p>
+    <div class="pace-map" id="pace-map"></div>
+  </section>
+
+  <!-- VALUE -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Value picks</h2>
+      <div class="meta">Edit odds · live edge</div>
+    </div>
+    <p class="section-intro">Enter current decimal odds (the tote SP or your bookmaker's price as decimals — e.g. 4/1 = 5.0, 3/1 = 4.0) and the table flags where the model's probability is higher than the market's implied probability. Edge above five percentage points is the strong-value threshold. Numbers update on each keystroke.</p>
+    <div class="value-table-wrap">
+      <table class="value-table" id="value-table"></table>
+    </div>
+  </section>
+
+  <!-- THE FIELD -->
+  <section class="section">
+    <div class="section-head">
+      <h2>The eighteen</h2>
+      <div class="meta">Tap to expand</div>
+    </div>
+    <p class="section-intro">A short case for and against each horse. The analysis draws on public form, Grade 1 results, and the connections' July records. Tags mark the meaningful positives and concerns at a glance.</p>
+    <div class="runners" id="runners"></div>
+  </section>
+
+  <!-- EXOTICS -->
+  <section class="section">
+    <div class="section-head">
+      <h2>Exotic shapes</h2>
+      <div class="meta">Combos worth considering</div>
+    </div>
+    <p class="section-intro">Suggested combinations from the model's top picks. Use these as a frame, not a recipe — the exotic pools reward conviction more than coverage.</p>
+    <div id="exotic-grid" class="exotic-grid"></div>
+  </section>
+
+  <!-- METHODOLOGY -->
+  <section class="section">
+    <div class="section-head">
+      <h2>What this is and isn't</h2>
+      <div class="meta">Honest methodology</div>
+    </div>
+    <div class="notes">
+      <h3>This is a structured opinion, not a winning system</h3>
+      <p>The model behind these rankings combines six factors with weights I chose: merit rating relative to the field (35%), weight carried versus expected weight from MR (20%), recent form quality (20%), distance suitability (10%), draw (5%), and connections strength (10%). A softmax with low temperature converts the composite scores into probabilities that sum to 100%.</p>
+      <p>The weights are not derived from data. They are my best read of what matters in this specific race. The professional handicappers at Sporting Post and Computaform have spent days on this — their views will be sharper than this model on picking the winner. Where this tool helps is in giving you a thinking framework, and in flagging horses where the published odds seem to undervalue what the rubric reads.</p>
+      <p>The per-runner analyses are synthesised from publicly available information at the time of writing (24 June 2026). Form, going preferences, and pace style can shift by race day — the public gallops on 25 June, scratchings, and going at Greyville on the day can all change the picture. Re-check odds before you commit.</p>
+      <p><em>One real caveat:</em> handicaps with 18 runners and a record purse attract heavy market money. The favourite at 33/10 has a roughly 23% implied chance — meaning the market itself is pricing in over three-quarters of all outcomes as <em>not</em> the favourite winning. Picking the winner is hard. Identifying value is where this tool earns its keep.</p>
+    </div>
+  </section>
+
+  <footer class="foot">
+    Private use only · Updated 24 June 2026 · <em>Verify odds and scratchings closer to race day</em>
+  </footer>
+</div>
+
+<script>
+'use strict';
+
+// ============================================================================
+// THE FIELD — 18 runners + 2 reserves
+// Compiled from: Race Coast / Hollywoodbets official, Sporting Post, Gold Circle,
+// The Citizen, The South African (final field unveiled 23 June 2026)
+// ============================================================================
+const FIELD = [
+  {
+    draw: 1, num: 1, name: "Isivivane", weight: 52, mr: 108,
+    jockey: "Sean Veale", trainer: "Peter Muscutt",
+    age: 4, sex: "g",
+    pace: "stalker",
+    form: "Maiden in this class. Outsider on merit, drew the rail which is more curse than blessing at the 2200m start.",
+    why: "Bottom weight at 52kg. Local KZN connections.",
+    against: "Lowest-rated horse in the field, and the rail draw at Greyville's 2200m start tends to box runners in. Has not shown Grade 1 ability.",
+    tags: [{t: "Bottom weight", k: "pos"}, {t: "Rail draw", k: "neg"}, {t: "Lowest MR", k: "neg"}]
+  },
+  {
+    draw: 2, num: 2, name: "Regulation", weight: 52, mr: 106,
+    jockey: "Zac Lloyd", trainer: "Justin Snaith",
+    age: 4, sex: "g",
+    pace: "stalker",
+    form: "Won Gr3 Peninsula Handicap over 1800m at Kenilworth, beating Zeitz by 3.20 lengths. Beat The Ultimate King in WSB 1900 receiving 6kg.",
+    why: "Snaith's lightweight raider. 1kg under sufferance (MR 106, but carrying minimum weight). Australian Zac Lloyd is hot off a Royal Ascot winner and drew the dream gate at 2. Originally booked for the now-scratched Happy Verse.",
+    against: "Unproven at 2200m and at this class. Asking him to step up from Gr3 winner to Grade 1 conqueror is a big leap.",
+    tags: [{t: "Snaith stable", k: "pos"}, {t: "Sharp draw", k: "pos"}, {t: "Light weight", k: "pos"}, {t: "Class step-up", k: "neg"}]
+  },
+  {
+    draw: 3, num: 3, name: "The Ultimate King", weight: 56.5, mr: 117,
+    jockey: "Kabelo Matsunyane", trainer: "Tony Peter",
+    age: 4, sex: "g",
+    pace: "stalker",
+    form: "Beaten a neck by Choisaanada in Gr2 Colorado King at level weights. Beaten by Regulation in WSB 1900 while receiving 6kg.",
+    why: "Kabelo Matsunyane won the 2024 July on Oriental Charm — knows how to ride this race. Draw 3 is fine. Tony Peter has runners ready for this.",
+    against: "Has consistently come up short against the very best when level. The Regulation match-up at the same terms here is unflattering.",
+    tags: [{t: "Winning jockey", k: "pos"}, {t: "Solid draw", k: "pos"}, {t: "Form holes", k: "neg"}]
+  },
+  {
+    draw: 4, num: 4, name: "Star Major", weight: 57, mr: 122,
+    jockey: "Mickaelle Michel", trainer: "James Crawford",
+    age: 3, sex: "c",
+    pace: "stalker",
+    form: "Won the Gr1 Daily News 2000 on 30 May 2026 at Greyville — same surface, three furlongs short, beat Note To Self in that race.",
+    why: "The favourite for good reason. Three-year-old colt hitting peak form, Greyville affinity proven, drew sweetly at 4, and at 57kg gets meaningful weight from the seasoned older horses. Mickaelle Michel — only female jockey in the field — celebrated her first Grade 1 win on him.",
+    against: "Three-year-olds tackling open-handicap company at 2200m for the first time can find the trip and the rough racing a test. At 33/10 he is not generous if the model is right that he's around a 30% chance.",
+    tags: [{t: "Recent G1 winner", k: "pos"}, {t: "Greyville form", k: "pos"}, {t: "Weight concession", k: "pos"}, {t: "First open hcp", k: "neg"}]
+  },
+  {
+    draw: 5, num: 5, name: "Legal Counsel", weight: 62, mr: 128,
+    jockey: "Callan Murray", trainer: "Justin Snaith",
+    age: 5, sex: "g",
+    pace: "leader",
+    form: "Second in Gr1 WSB Met 2000m. Second (pipped) in Gr1 Hollywoodbets Gold Challenge 1600m. The class horse of the field by MR.",
+    why: "Highest MR in the race (128). Snaith's pace-key in major handicaps — often deployed as the rabbit. Draw 5 is good and Callan Murray is a strong tactical rider.",
+    against: "Carrying 62kg over 2200m around Greyville's tight turns is genuinely brutal — the new conditions stretched the top weight from 60kg to 62kg specifically to test this. No horse has won the July off a top weight of 62 in modern times to my knowledge — please verify.",
+    tags: [{t: "Highest MR", k: "pos"}, {t: "G1 placings", k: "pos"}, {t: "Topweight burden", k: "neg"}, {t: "Unproven 2200m", k: "neg"}]
+  },
+  {
+    draw: 6, num: 6, name: "Hazy Dazy", weight: 54.5, mr: 117,
+    jockey: "Trent Mayhew", trainer: "Corne Spies",
+    age: 4, sex: "f",
+    pace: "stalker",
+    form: "Filly with progressive form profile. Light at 54.5kg.",
+    why: "Five fillies in the field this year — unusually high — and Hazy Dazy slots in nicely with a fair MR and a workable draw at 6.",
+    against: "Has not won at the very highest level. Step up in class is steep. Less is publicly known about her recent form than the major contenders.",
+    tags: [{t: "Light weight", k: "pos"}, {t: "Good draw", k: "pos"}, {t: "Class unproven", k: "neg"}]
+  },
+  {
+    draw: 7, num: 7, name: "Wish List", weight: 54.5, mr: 117,
+    jockey: "Andrew Fortune", trainer: "Justin Snaith",
+    age: 4, sex: "f",
+    pace: "stalker",
+    form: "Dual Gr1-winning filly. Completed a four-timer with the Gr2 Woolavington 2000 last time out.",
+    why: "Veteran Andrew Fortune's final July ride — emotional storyline that will attract money. Snaith stable in cracking form. Draw 7 is the sweet spot. Light at 54.5kg with proven Grade 1 ability.",
+    against: "Fortune has never won the July despite a long career — searching for first victory in his final crack at the race. Soft going could expose stamina for the trip.",
+    tags: [{t: "Dual G1 winner", k: "pos"}, {t: "Snaith stable", k: "pos"}, {t: "Sweet draw", k: "pos"}, {t: "Filly vs colts", k: "neg"}]
+  },
+  {
+    draw: 8, num: 8, name: "Gladatorian", weight: 61.5, mr: 127,
+    jockey: "Muzi Yeni", trainer: "Stuart Ferrie",
+    age: 5, sex: "g",
+    pace: "stalker",
+    form: "Hard-knocking stayer. MR 127 is the second highest in the field. Consistent in major staying races.",
+    why: "KZN-trained — knows Greyville. Bred and built for stamina at 2200m. Muzi Yeni in the saddle.",
+    against: "61.5kg is a brutal burden at the trip. Like Legal Counsel, the new weight conditions punish him.",
+    tags: [{t: "Stayer's pedigree", k: "pos"}, {t: "KZN local", k: "pos"}, {t: "Heavy weight", k: "neg"}]
+  },
+  {
+    draw: 9, num: 9, name: "Viva's Liberte", weight: 53, mr: 114,
+    jockey: "Craig Zackey", trainer: "Candice Bass",
+    age: 4, sex: "f",
+    pace: "closer",
+    form: "Bass stable filly — Candice Bass made history in 2017 as the first female trainer to win the July (Marinaresco).",
+    why: "Craig Zackey is the defending July-winning jockey — he steered The Real Prince home in 2025. Light at 53kg. The Bass-Zackey combo is a serious storyline.",
+    against: "MR 114 is mid-pack. Has not been the focal Grade 1 winner in this stable.",
+    tags: [{t: "Defending jockey", k: "pos"}, {t: "Light weight", k: "pos"}, {t: "Mid-rated", k: "neg"}]
+  },
+  {
+    draw: 10, num: 10, name: "Native Ruler", weight: 58.5, mr: 121,
+    jockey: "Keagan de Melo", trainer: "Justin Snaith",
+    age: 4, sex: "c",
+    pace: "stalker",
+    form: "Snaith colt with strong recent form. Owners Bortz and Goldsmith part-owned 2024 winner Oriental Charm and sole-own Regulation in this field.",
+    why: "Snaith stable, MR 121, well-handicapped on 58.5kg, draw 10 is fine. Keagan de Melo is in form. The owners are July-winning veterans who pick their targets.",
+    against: "Trapped at 14/1 partly because the betting public is fixated on the favourites — possibly the genuine value of the Snaith team.",
+    tags: [{t: "Snaith stable", k: "pos"}, {t: "July-savvy owners", k: "pos"}, {t: "Workable weight", k: "pos"}]
+  },
+  {
+    draw: 11, num: 11, name: "Note To Self", weight: 55.5, mr: 118,
+    jockey: "Richard Fourie", trainer: "Justin Snaith",
+    age: 3, sex: "c",
+    pace: "stalker",
+    form: "Gr1 Cape Derby winner. Beaten by Star Major in the Gr1 Daily News 2000 at Greyville — that loss is the central question.",
+    why: "Receives weight from Star Major here (55.5 vs 57kg = 1.5kg swing). Richard Fourie is one of the few jockeys in this field who has actually won the July. Draw 11 is fine — five of the last ten Julys won from 11 or wider. Snaith's other 3yo hope.",
+    against: "If Star Major beat him at Greyville at the weights, why expect a reversal here? The 1.5kg swing has to be enough.",
+    tags: [{t: "G1 winner", k: "pos"}, {t: "Weight swing", k: "pos"}, {t: "Recent loss to Star Major", k: "neg"}]
+  },
+  {
+    draw: 12, num: 12, name: "Zeitz", weight: 53, mr: 110,
+    jockey: "Serino Moodley", trainer: "Andre Nel",
+    age: 4, sex: "g",
+    pace: "stalker",
+    form: "Won the Gr3 Betgames Cup Trial over 1800m at Greyville. Beaten 3.20 lengths by Regulation in the Peninsula Handicap on same terms as here.",
+    why: "Local prep win at Greyville is meaningful — these horses arrive race-fit. Light at 53kg. Draw 12 is sound.",
+    against: "Lost to Regulation by over three lengths on the same weight terms as today's race — that's a real form negative against a major rival.",
+    tags: [{t: "Greyville prep win", k: "pos"}, {t: "Light weight", k: "pos"}, {t: "Beaten by Regulation", k: "neg"}]
+  },
+  {
+    draw: 13, num: 13, name: "Mocha Blend", weight: 56.5, mr: 117,
+    jockey: "Tristan Godden", trainer: "Frank Robinson",
+    age: 4, sex: "f",
+    pace: "stalker",
+    form: "KZN-trained filly. MR 117 is competitive in this field.",
+    why: "Greyville local. Tristan Godden up. Five fillies in the field this year — Mocha Blend is one of the better-rated.",
+    against: "Less publicly visible than the Cape and Highveld raiders. The market reflects that doubt — likely to be a longer price.",
+    tags: [{t: "KZN local", k: "pos"}, {t: "Mid-rated", k: "neg"}]
+  },
+  {
+    draw: 14, num: 14, name: "I Salute You", weight: 54.5, mr: 113,
+    jockey: "Mark du Plessis", trainer: "Peter Muscutt",
+    age: 4, sex: "g",
+    pace: "stalker",
+    form: "KZN locally trained. MR 113 places him mid-pack.",
+    why: "Mark du Plessis is the SA-born Australia-based jockey returning for the race. Muscutt has two runners — wider net at the price.",
+    against: "Mid-rated and no recent Grade 1 form. Outsider on merit.",
+    tags: [{t: "KZN local", k: "pos"}, {t: "Outsider", k: "neg"}]
+  },
+  {
+    draw: 15, num: 15, name: "Olivia's Way", weight: 55, mr: 114,
+    jockey: "JP van der Merwe", trainer: "Roy Magner",
+    age: 4, sex: "f",
+    pace: "closer",
+    form: "Mare. Had been scratched from the Cape Met earlier in the year — campaign reshaped for this target.",
+    why: "JP van der Merwe is a previous July winner. Light weight at 55kg.",
+    against: "Mid-rated mare in a top-class field. Wider draw at 15.",
+    tags: [{t: "Winning jockey", k: "pos"}, {t: "Wider draw", k: "neg"}]
+  },
+  {
+    draw: 16, num: 16, name: "Minogue", weight: 56, mr: 116,
+    jockey: "Gavin Lerena", trainer: "Candice & Tammy Dawson",
+    age: 4, sex: "f",
+    pace: "closer",
+    form: "Dawson sisters' mare — they would become the third female trainer(s) to win the July.",
+    why: "Gavin Lerena is the reigning SA champion jockey and won the 2021 July aboard Kommetdieding. Closer with patience. Story potential.",
+    against: "Wide draw at 16 means she needs the race to develop properly. MR 116 needs the leaders to overcook it for her to land the knockout blow.",
+    tags: [{t: "Champion jockey", k: "pos"}, {t: "Strong finisher", k: "pos"}, {t: "Wide draw", k: "neg"}]
+  },
+  {
+    draw: 17, num: 17, name: "King Pelles", weight: 59, mr: 122,
+    jockey: "Chad Schofield", trainer: "Gareth van Zyl",
+    age: 4, sex: "c",
+    pace: "stalker",
+    form: "Progressive middle-distance form. MR 122 — joint third-highest with Star Major.",
+    why: "KZN champion trainer Gareth van Zyl with home-track knowledge. Chad Schofield rides — Australia-based and selective with his SA rides.",
+    against: "Drew 17 wide — needs to either burn early petrol to cross or sit very wide all the way. The book on the new conditions is unkind to a horse needing to cover ground from there.",
+    tags: [{t: "Joint 3rd-best MR", k: "pos"}, {t: "Local trainer", k: "pos"}, {t: "Very wide draw", k: "neg"}]
+  },
+  {
+    draw: 18, num: 18, name: "Aladdin's Lamp", weight: 53, mr: 110,
+    jockey: "Calvin Habib", trainer: "Mike & Mathew de Kock",
+    age: 4, sex: "g",
+    pace: "closer",
+    form: "De Kock-trained, light at 53kg.",
+    why: "Mike de Kock is tied with Justin Snaith on five Durban July wins. Light weight is a real asset. Five of the last ten Julys won from 11+ — so 18 is not as fatal as it looks.",
+    against: "Drew the absolute widest. Even with the widest-draw winners in recent history, the extra ground covered is meaningful. MR 110 is mid-low for this class.",
+    tags: [{t: "de Kock training", k: "pos"}, {t: "Light weight", k: "pos"}, {t: "Widest draw", k: "neg"}, {t: "Mid-low MR", k: "neg"}]
+  }
+];
+
+// Current ante-post odds (decimal) as of 24 June 2026
+const ANTE_POST = {
+  4: 4.3,    // Star Major 33/10
+  11: 5.0,   // Note To Self 4/1
+  7: 6.0,    // Wish List 5/1
+  2: 7.0,    // Regulation 6/1
+  10: 15.0,  // Native Ruler 14/1
+  9: 15.0,   // Viva's Liberte 14/1
+  5: 15.0,   // Legal Counsel 14/1
+  // Others will fall to market — pre-fill estimates
+  3: 21.0,   // The Ultimate King
+  8: 17.0,   // Gladatorian
+  17: 19.0,  // King Pelles
+  6: 26.0,   // Hazy Dazy
+  16: 26.0,  // Minogue
+  13: 34.0,  // Mocha Blend
+  12: 34.0,  // Zeitz
+  15: 41.0,  // Olivia's Way
+  14: 51.0,  // I Salute You
+  18: 41.0,  // Aladdin's Lamp
+  1: 81.0    // Isivivane
+};
+
+// ============================================================================
+// SCORING ENGINE
+// ============================================================================
+const DEFAULT_WEIGHTS = {
+  mr: 0.35,
+  weightAdjust: 0.20,
+  recentForm: 0.20,
+  distance: 0.10,
+  draw: 0.05,
+  connections: 0.10
+};
+const WEIGHT_LABELS = {
+  mr: 'Merit rating',
+  weightAdjust: 'Weight vs expected',
+  recentForm: 'Recent form',
+  distance: 'Distance suit.',
+  draw: 'Draw',
+  connections: 'Connections'
+};
+
+// Form score: derived from notes I researched, on 0-100 scale
+const FORM_SCORE = {
+  1: 30, 2: 70, 3: 55, 4: 92, 5: 85, 6: 55, 7: 88, 8: 75,
+  9: 55, 10: 70, 11: 80, 12: 60, 13: 50, 14: 40, 15: 45,
+  16: 55, 17: 70, 18: 55
+};
+
+// Distance suitability: known/expected at 2200m
+const DIST_SCORE = {
+  1: 50, 2: 50, 3: 60, 4: 75, 5: 60, 6: 60, 7: 80, 8: 90,
+  9: 65, 10: 75, 11: 75, 12: 65, 13: 60, 14: 55, 15: 65,
+  16: 70, 17: 75, 18: 60
+};
+
+// Connections strength: trainer's July record + jockey's July record
+const CONN_SCORE = {
+  1: 40, 2: 90, 3: 70, 4: 80, 5: 90, 6: 40, 7: 90, 8: 55,
+  9: 75, 10: 90, 11: 90, 12: 55, 13: 45, 14: 60, 15: 65,
+  16: 75, 17: 60, 18: 80
+};
+
+// ============================================================================
+// STATE — anything mutable lives here
+// ============================================================================
+const state = {
+  weights: { ...DEFAULT_WEIGHTS },
+  scratched: {},        // { num: true }
+  pace: 'normal',       // 'genuine' | 'normal' | 'tactical'
+  notes: {},            // { num: 'text' }
+  odds: { ...ANTE_POST }
+};
+
+// Load persisted state from storage (window.storage primary, localStorage fallback)
+function loadState() {
+  // Try window.storage first (Claude artifact persistence)
+  const keys = ['weights', 'scratched', 'pace', 'notes', 'odds'];
+  keys.forEach(async (k) => {
+    try {
+      const r = await window.storage?.get('dj2026:' + k);
+      if (r && r.value) {
+        const parsed = typeof r.value === 'string' ? JSON.parse(r.value) : r.value;
+        if (k === 'odds') state.odds = { ...ANTE_POST, ...parsed };
+        else if (k === 'weights') state.weights = { ...DEFAULT_WEIGHTS, ...parsed };
+        else state[k] = parsed;
+        renderAll();
+      }
+    } catch (e) {}
+  });
+  // Also try localStorage as fallback
+  try {
+    keys.forEach(k => {
+      const v = window.localStorage?.getItem('dj2026:' + k);
+      if (v) {
+        const parsed = JSON.parse(v);
+        if (k === 'odds') state.odds = { ...ANTE_POST, ...parsed };
+        else if (k === 'weights') state.weights = { ...DEFAULT_WEIGHTS, ...parsed };
+        else state[k] = parsed;
+      }
+    });
+  } catch (e) {}
+}
+
+function persist(key) {
+  try { window.storage?.set('dj2026:' + key, JSON.stringify(state[key])); } catch (e) {}
+  try { window.localStorage?.setItem('dj2026:' + key, JSON.stringify(state[key])); } catch (e) {}
+}
+
+// ============================================================================
+// SCORING
+// ============================================================================
+function drawScore(draw) {
+  if (draw === 1) return 30;
+  if (draw === 2 || draw === 3) return 60;
+  if (draw >= 4 && draw <= 12) return 80;
+  if (draw <= 14) return 65;
+  if (draw <= 16) return 55;
+  return 45;
+}
+
+function weightAdjust(runner, liveRunners) {
+  const mrs = liveRunners.map(r => r.mr);
+  const wts = liveRunners.map(r => r.weight);
+  const maxMR = Math.max(...mrs);
+  const minMR = Math.min(...mrs);
+  const maxWt = Math.max(...wts);
+  const minWt = Math.min(...wts);
+  if (maxMR === minMR) return 50;
+  const expectedWt = minWt + (runner.mr - minMR) / (maxMR - minMR) * (maxWt - minWt);
+  const diff = expectedWt - runner.weight;
+  const score = 50 + (diff / 3) * 40;
+  return Math.max(5, Math.min(95, score));
+}
+
+function paceAdjust(runner) {
+  // Pace scenario tilts the playing field
+  // Genuine pace: closers benefit, leaders suffer
+  // Tactical: leaders benefit, closers suffer
+  // Normal: no change
+  if (state.pace === 'genuine') {
+    if (runner.pace === 'closer') return 12;
+    if (runner.pace === 'leader') return -10;
+    return 0;
+  }
+  if (state.pace === 'tactical') {
+    if (runner.pace === 'leader') return 12;
+    if (runner.pace === 'closer') return -10;
+    return 0;
+  }
+  return 0;
+}
+
+function compositeScore(runner, liveRunners) {
+  const mrs = liveRunners.map(r => r.mr);
+  const maxMR = Math.max(...mrs);
+  const minMR = Math.min(...mrs);
+  const mrNorm = maxMR === minMR ? 50 : ((runner.mr - minMR) / (maxMR - minMR)) * 100;
+  const wtAdj = weightAdjust(runner, liveRunners);
+  const form = FORM_SCORE[runner.num] || 50;
+  const dist = DIST_SCORE[runner.num] || 50;
+  const dr = drawScore(runner.draw);
+  const conn = CONN_SCORE[runner.num] || 50;
+  const w = state.weights;
+  const base = (
+    mrNorm * w.mr +
+    wtAdj * w.weightAdjust +
+    form * w.recentForm +
+    dist * w.distance +
+    dr * w.draw +
+    conn * w.connections
+  );
+  return base + paceAdjust(runner);
+}
+
+function softmax(scores, temperature) {
+  const T = Math.max(1, temperature);
+  const maxS = Math.max(...scores);
+  const exps = scores.map(s => Math.exp((s - maxS) / T));
+  const sum = exps.reduce((a, b) => a + b, 0);
+  return exps.map(e => e / sum);
+}
+
+function getRanked() {
+  const live = FIELD.filter(r => !state.scratched[r.num]);
+  if (live.length === 0) return [];
+  const scores = live.map(r => compositeScore(r, live));
+  const probs = softmax(scores, 7);
+  const liveRanked = live.map((r, i) => ({ ...r, _score: scores[i], _prob: probs[i] }))
+    .sort((a, b) => b._prob - a._prob);
+  // Append scratched at the end with prob 0
+  const scratched = FIELD.filter(r => state.scratched[r.num])
+    .map(r => ({ ...r, _score: 0, _prob: 0 }));
+  return [...liveRanked, ...scratched];
+}
+
+function $(sel) { return document.querySelector(sel); }
+function $$(sel) { return Array.from(document.querySelectorAll(sel)); }
+
+function isValuePick(runner) {
+  if (state.scratched[runner.num]) return false;
+  const odds = state.odds[runner.num];
+  if (!odds || odds <= 1) return false;
+  const marketProb = 1 / odds;
+  return (runner._prob - marketProb) > 0.05;
+}
+
+function escapeHtml(s) {
+  if (s == null) return '';
+  return String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+}
+
+// ============================================================================
+// RENDERING
+// ============================================================================
+function renderStalls(ranked) {
+  const grid = $('#stalls-grid');
+  const topThree = ranked.filter(r => !state.scratched[r.num]).slice(0, 3).map(r => r.num);
+  const valueNums = ranked.filter(isValuePick).map(r => r.num);
+  const byDraw = FIELD.slice().sort((a, b) => a.draw - b.draw);
+  grid.innerHTML = byDraw.map(r => {
+    const isScratched = state.scratched[r.num];
+    const isTop = topThree.includes(r.num);
+    const isValue = valueNums.includes(r.num) && !isTop;
+    let badge = '';
+    const rankInTop = ranked.findIndex(x => x.num === r.num) + 1;
+    if (isScratched) badge = '';
+    else if (isTop) badge = `<span class="badge">#${rankInTop}</span>`;
+    else if (isValue) badge = `<span class="badge">Value</span>`;
+    let cls = 'stall';
+    if (isScratched) cls += ' scratched';
+    else if (isTop) cls += ' top-pick';
+    else if (isValue) cls += ' value';
+    return `
+      <div class="${cls}" data-num="${r.num}">
+        ${badge}
+        <div class="draw">${r.draw}</div>
+        <div class="horse">${escapeHtml(r.name)}</div>
+        <div class="kg">${r.weight}kg · MR ${r.mr}</div>
+      </div>
+    `;
+  }).join('');
+  $$('.stall').forEach(el => {
+    el.addEventListener('click', () => {
+      const num = Number(el.dataset.num);
+      const target = document.querySelector(`.runner[data-num="${num}"]`);
+      if (target) {
+        target.classList.add('open');
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+}
+
+function renderPicks(ranked) {
+  const panel = $('#picks-panel');
+  const live = ranked.filter(r => !state.scratched[r.num]);
+  const top3 = live.slice(0, 3);
+  panel.innerHTML = top3.map((r, i) => `
+    <div class="pick-card rank-${i + 1}">
+      <div class="rank">${i === 0 ? 'Win pick' : (i === 1 ? 'Second' : 'Third')}</div>
+      <div class="prob">
+        <div class="value">${(r._prob * 100).toFixed(0)}%</div>
+        <div class="label">Model prob</div>
+      </div>
+      <div class="horse"><span class="num">#${r.num}</span>${escapeHtml(r.name)}</div>
+      <div class="stats">
+        <span>${r.weight}kg</span>
+        <span>MR ${r.mr}</span>
+        <span>Draw ${r.draw}</span>
+      </div>
+      <div class="why">${r.why}</div>
+    </div>
+  `).join('');
+}
+
+function renderPaceMap() {
+  const lanes = { leader: [], stalker: [], closer: [] };
+  FIELD.forEach(r => {
+    if (state.scratched[r.num]) return;
+    lanes[r.pace].push(r);
+  });
+  $('#pace-map').innerHTML = `
+    <div class="pace-lane">
+      <div class="label">Front runners</div>
+      <div class="horses">${lanes.leader.map(r => `<div class="pace-horse"><span class="num">#${r.num}</span>${escapeHtml(r.name)}</div>`).join('') || '<div style="color:var(--dim); font-size:13px;">None</div>'}</div>
+    </div>
+    <div class="pace-lane">
+      <div class="label">Stalkers</div>
+      <div class="horses">${lanes.stalker.map(r => `<div class="pace-horse"><span class="num">#${r.num}</span>${escapeHtml(r.name)}</div>`).join('')}</div>
+    </div>
+    <div class="pace-lane">
+      <div class="label">Closers</div>
+      <div class="horses">${lanes.closer.map(r => `<div class="pace-horse"><span class="num">#${r.num}</span>${escapeHtml(r.name)}</div>`).join('')}</div>
+    </div>
+  `;
+}
+
+function renderValueTable(ranked) {
+  const table = $('#value-table');
+  const live = ranked.filter(r => !state.scratched[r.num]);
+  table.innerHTML = `
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Horse</th>
+        <th class="pct">Model</th>
+        <th>Odds</th>
+        <th class="pct">Market</th>
+        <th class="pct">Edge</th>
+      </tr>
+    </thead>
+    <tbody>
+      ${live.map(r => {
+        const odds = state.odds[r.num] || '';
+        const marketProb = odds && odds > 1 ? (1 / odds) : 0;
+        const edge = r._prob - marketProb;
+        let edgeHtml;
+        if (!odds) edgeHtml = '<span class="edge none">—</span>';
+        else if (edge > 0.05) edgeHtml = `<span class="edge strong">+${(edge * 100).toFixed(1)}%</span>`;
+        else if (edge > 0) edgeHtml = `<span class="edge mild">+${(edge * 100).toFixed(1)}%</span>`;
+        else edgeHtml = `<span class="edge neg">${(edge * 100).toFixed(1)}%</span>`;
+        return `
+          <tr>
+            <td class="num">${r.num}</td>
+            <td class="horse">${escapeHtml(r.name)}</td>
+            <td class="pct">${(r._prob * 100).toFixed(1)}%</td>
+            <td><input class="odds" type="number" step="0.1" min="1" data-num="${r.num}" value="${odds}"></td>
+            <td class="pct">${odds ? (marketProb * 100).toFixed(1) + '%' : '—'}</td>
+            <td class="pct">${edgeHtml}</td>
+          </tr>
+        `;
+      }).join('')}
+    </tbody>
+  `;
+  $$('input.odds').forEach(inp => {
+    inp.addEventListener('input', (e) => {
+      const num = Number(e.target.dataset.num);
+      const v = parseFloat(e.target.value);
+      if (v && v > 1) state.odds[num] = v;
+      else delete state.odds[num];
+      persist('odds');
+      const r = getRanked();
+      renderValueTable(r);
+      renderStalls(r);
+      renderExotic(r);
+    });
+  });
+}
+
+function renderRunners(ranked) {
+  const container = $('#runners');
+  const byNum = FIELD.slice().sort((a, b) => a.num - b.num);
+  container.innerHTML = byNum.map(r => {
+    const isScratched = !!state.scratched[r.num];
+    const rankObj = ranked.find(x => x.num === r.num);
+    const rankPos = ranked.findIndex(x => x.num === r.num) + 1;
+    const note = state.notes[r.num] || '';
+    const sexLabel = r.sex === 'f' ? 'filly' : (r.sex === 'm' ? 'mare' : (r.sex === 'c' ? 'colt' : 'gelding'));
+    return `
+      <div class="runner ${isScratched ? 'scratched' : ''}" data-num="${r.num}">
+        <div class="runner-head">
+          <div class="num-block">
+            <div class="saddle">${r.num}</div>
+            <div class="draw-pill">Draw ${r.draw}</div>
+          </div>
+          <div class="main">
+            <h3>${escapeHtml(r.name)}</h3>
+            <div class="conn">${escapeHtml(r.jockey)}<span class="sep">·</span>${escapeHtml(r.trainer)}<span class="sep">·</span>${r.age}yo ${sexLabel}</div>
+          </div>
+          <div class="right">
+            <span class="kg">${r.weight}kg</span>
+            <span class="mr-display">MR ${r.mr}</span>
+            <div class="modelprob">${isScratched ? 'Scratched' : `#${rankPos} · ${(rankObj._prob * 100).toFixed(1)}%`}</div>
+          </div>
+        </div>
+        <div class="runner-body">
+          <p><em style="color:var(--protea); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px;">Form:</em> ${r.form}</p>
+          <p><em style="color:var(--protea); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px;">For:</em> ${r.why}</p>
+          <p><em style="color:var(--protea); font-family:'Cormorant Garamond',serif; font-style:italic; font-size:15px;">Against:</em> ${r.against}</p>
+          <div class="tags">
+            ${r.tags.map(t => `<span class="tag ${t.k}">${escapeHtml(t.t)}</span>`).join('')}
+          </div>
+          <div class="runner-notes">
+            <label>Your notes — gallops, intel, gut</label>
+            <textarea data-num="${r.num}" placeholder="Add what you see — saved automatically">${escapeHtml(note)}</textarea>
+          </div>
+          <div class="runner-actions">
+            <span class="action-label">${isScratched ? 'Currently scratched — excluded from model' : 'Live in the field'}</span>
+            <button class="scratch-btn ${isScratched ? 'is-scratched' : ''}" data-num="${r.num}">${isScratched ? 'Restore' : 'Mark scratched'}</button>
+          </div>
+        </div>
+      </div>
+    `;
+  }).join('');
+
+  // Wire up head clicks for expand/collapse — but ignore clicks on the body
+  $$('.runner-head').forEach(h => {
+    h.addEventListener('click', () => {
+      h.parentElement.classList.toggle('open');
+    });
+  });
+
+  // Stop event bubbling on inner controls so they don't toggle the card
+  $$('.runner-body').forEach(b => {
+    b.addEventListener('click', (e) => e.stopPropagation());
+  });
+
+  // Scratch buttons
+  $$('.scratch-btn').forEach(b => {
+    b.addEventListener('click', (e) => {
+      e.stopPropagation();
+      const num = Number(b.dataset.num);
+      if (state.scratched[num]) delete state.scratched[num];
+      else state.scratched[num] = true;
+      persist('scratched');
+      renderAll();
+    });
+  });
+
+  // Notes textareas
+  $$('.runner-notes textarea').forEach(t => {
+    t.addEventListener('input', (e) => {
+      const num = Number(e.target.dataset.num);
+      const v = e.target.value;
+      if (v.trim()) state.notes[num] = v;
+      else delete state.notes[num];
+      persist('notes');
+    });
+  });
+}
+
+function renderExotic(ranked) {
+  const live = ranked.filter(r => !state.scratched[r.num]);
+  const top4 = live.slice(0, 4);
+  const top5 = live.slice(0, 5);
+  const valuePicks = live.filter(isValuePick);
+
+  if (top4.length < 4) {
+    $('#exotic-grid').innerHTML = '<div class="exotic"><h3>Not enough runners</h3><div class="combo">Restore at least four runners to see exotic suggestions.</div></div>';
+    return;
+  }
+
+  $('#exotic-grid').innerHTML = `
+    <div class="exotic">
+      <h3>Win / each-way</h3>
+      <div class="combo">#${top4[0].num} ${escapeHtml(top4[0].name)}</div>
+      <div class="note">Win on the model favourite, each-way protection if at 5/1 or longer.</div>
+    </div>
+    <div class="exotic">
+      <h3>Quartet (boxed top four)</h3>
+      <div class="combo">${top4.map(r => '#' + r.num).join(' · ')}</div>
+      <div class="note">Box of four for the first four placings in any order. 24-line bet at R1 = R24.</div>
+    </div>
+    <div class="exotic">
+      <h3>Trifecta (banker + four)</h3>
+      <div class="combo">Banker #${live[0].num} → ${top5.slice(1).map(r => '#' + r.num).join(' · ')}</div>
+      <div class="note">Banking the model favourite to win, with the next four to fill 2nd and 3rd in any order.</div>
+    </div>
+    ${valuePicks.length > 0 ? `
+    <div class="exotic">
+      <h3>Value lean</h3>
+      <div class="combo">${valuePicks.map(r => '#' + r.num + ' ' + escapeHtml(r.name)).join(', ')}</div>
+      <div class="note">Where the model sees positive expected return against current odds. Edge depends on you entering live prices.</div>
+    </div>
+    ` : `
+    <div class="exotic">
+      <h3>Value lean</h3>
+      <div class="combo">Update the odds table to see live value flags</div>
+      <div class="note">The strong-value threshold is +5% over the market's implied probability.</div>
+    </div>
+    `}
+  `;
+}
+
+function renderWeights() {
+  const rows = $('#weightsRows');
+  rows.innerHTML = Object.entries(WEIGHT_LABELS).map(([k, label]) => {
+    const pct = Math.round(state.weights[k] * 100);
+    return `
+      <div class="weight-row">
+        <label>${label}</label>
+        <div class="pct" id="wpct-${k}">${pct}%</div>
+        <input type="range" min="0" max="60" value="${pct}" data-w="${k}">
+      </div>
+    `;
+  }).join('');
+  $$('#weightsRows input[type="range"]').forEach(inp => {
+    inp.addEventListener('input', (e) => {
+      const k = e.target.dataset.w;
+      const v = Number(e.target.value);
+      state.weights[k] = v / 100;
+      // Renormalise so all weights sum to 1
+      const total = Object.values(state.weights).reduce((a, b) => a + b, 0);
+      if (total > 0) {
+        Object.keys(state.weights).forEach(key => {
+          state.weights[key] = state.weights[key] / total;
+        });
+      }
+      // Update displays
+      Object.keys(state.weights).forEach(key => {
+        const display = document.getElementById('wpct-' + key);
+        if (display) display.textContent = Math.round(state.weights[key] * 100) + '%';
+        const slider = document.querySelector(`input[data-w="${key}"]`);
+        if (slider && key !== k) slider.value = Math.round(state.weights[key] * 100);
+      });
+      persist('weights');
+      renderAll(true); // skip re-rendering the runner cards (would lose focus) — also skip weights
+    });
+  });
+}
+
+function updatePaceToggle() {
+  $$('#paceToggle button').forEach(b => {
+    if (b.dataset.pace === state.pace) b.classList.add('active');
+    else b.classList.remove('active');
+  });
+}
+
+function renderAll(skipDeepRefresh) {
+  const ranked = getRanked();
+  renderStalls(ranked);
+  renderPicks(ranked);
+  renderPaceMap();
+  renderValueTable(ranked);
+  renderExotic(ranked);
+  if (!skipDeepRefresh) {
+    renderRunners(ranked);
+  }
+}
+
+// ============================================================================
+// INIT
+// ============================================================================
+function init() {
+  loadState();
+
+  // Pace toggle
+  $$('#paceToggle button').forEach(b => {
+    b.addEventListener('click', () => {
+      state.pace = b.dataset.pace;
+      persist('pace');
+      updatePaceToggle();
+      renderAll();
+    });
+  });
+  updatePaceToggle();
+
+  // Advanced panel toggle
+  $('#advancedBtn').addEventListener('click', () => {
+    const panel = $('#advancedPanel');
+    const isOpen = panel.classList.toggle('open');
+    $('#advancedBtn').textContent = isOpen ? 'Advanced ▴' : 'Advanced ▾';
+  });
+
+  // Reset button
+  $('#resetBtn').addEventListener('click', () => {
+    if (!confirm('Reset weights, pace, scratchings, odds, and notes to defaults? This cannot be undone.')) return;
+    state.weights = { ...DEFAULT_WEIGHTS };
+    state.scratched = {};
+    state.pace = 'normal';
+    state.notes = {};
+    state.odds = { ...ANTE_POST };
+    ['weights', 'scratched', 'pace', 'notes', 'odds'].forEach(persist);
+    updatePaceToggle();
+    renderWeights();
+    renderAll();
+  });
+
+  renderWeights();
+  renderAll();
+}
+
+init();
+</script>
+</body>
+</html>
